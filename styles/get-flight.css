@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Gibson Regular", Tahoma, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #33393d;
+}
+
+.heard {
+  display: flex;
+  background-color: #2aabe4;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffcd24;
+}
+
+.form {
+  margin: 40px;
+}
+
+form h1 {
+  margin-bottom: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+form div {
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  padding-right: 16px;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.butt_link {
+  background-color: #1bb3f5;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75rem 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  height: 50px;
+  width: 100%;
+}
+
+.flight-details {
+  display: flex;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.flight-details div {
+  margin: 10px;
+  border-bottom: 1px solid #1bb3f5;
+  border-right: 1px solid #1bb3f5;
+  padding: 30px;
+  padding-right: 50px;
+}
+
+.flight-details button {
+  background-color: #1bb3f5;
+  border: none;
+  padding: 20px;
+}
+
+#tktDetails {
+  content: "";
+  position: fixed;
+  height: 100vh;
+  width: 500px;
+  top: 0%;
+  left: -100%;
+  /* transform: translateY(-50%); */
+  background-image: linear-gradient(-45deg, #2aabe4 0%, #04befe 100%);
+  transition: 1.8s ease-in-out;
+  z-index: 6;
+  color: #fff;
+}
+
+#tktDetails.active {
+  left: 0px;
+}
