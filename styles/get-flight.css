@@ -62,6 +62,7 @@ form div {
   display: flex;
   margin: 20px;
   margin-top: 50px;
+  flex-direction: column;
 }
 
 .flight-details div {
@@ -87,11 +88,41 @@ form div {
   left: -100%;
   /* transform: translateY(-50%); */
   background-image: linear-gradient(-45deg, #2aabe4 0%, #04befe 100%);
-  transition: 1.8s ease-in-out;
+  transition: 1s ease-in-out;
   z-index: 6;
   color: #fff;
 }
 
 #tktDetails.active {
   left: 0px;
+}
+
+.flight-detail {
+  display: flex;
+  flex-direction: row;
+}
+
+.tktDetails img {
+  width: 350px;
+  height: 170px;
+  margin-bottom: 20px;
+}
+
+.tktDetails {
+  margin: 40px;
+}
+.flex {
+  display: flex;
+}
+
+.tktDetails div {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  padding-right: 50px;
+  /* text-decoration: underline; */
+}
+
+.detail {
+  border-bottom: 1px solid #33393d;
+  border-right: 1px solid #33393d;
 }

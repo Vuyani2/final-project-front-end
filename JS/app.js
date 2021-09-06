@@ -33,7 +33,7 @@ regForm.addEventListener("submit", (e) => {
 
   console.log(details);
 
-  fetch("https://lit-beach-56409.herokuapp.com/user-registration/", {
+  fetch("https://obscure-retreat-25084.herokuapp.com/user-registration/", {
     headers: { "content-type": "application/json" },
     method: "POST",
     body: JSON.stringify(details),
@@ -47,7 +47,7 @@ regForm.addEventListener("submit", (e) => {
 function login(username, password) {
   console.log(username);
   console.log(password);
-  fetch("https://lit-beach-56409.herokuapp.com/auth", {
+  fetch("https://obscure-retreat-25084.herokuapp.com/auth", {
     method: "POST",
     body: JSON.stringify({
       username: `${username}`,
