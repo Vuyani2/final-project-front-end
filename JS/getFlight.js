@@ -103,3 +103,42 @@ function showFlightDetails(tktshows) {
 showFlightDetails(JSON.parse(localStorage.getItem("tktDetails")));
 console.log(JSON.parse(localStorage.getItem("tktshows")));
 JSON.parse(localStorage.getItem("tktshows"));
+
+fetch(
+  "https://obscure-retreat-25084.herokuapp.com/get-tkt/" +
+    from_ +
+    "/" +
+    to_ +
+    "/",
+  { method: "GET" }
+)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data.data);
+    let tickets = data.data;
+
+    localStorage.tktSeach = JSON.stringify(data.data);
+  });
+
+function filterFlight(tktSeach) {
+  let tktDetailsContainer = document.querySelector(".flight-details");
+  // console.log(tktDetailsContainer);
+  // let tktDetails = JSON.parse(localStorage.getItem("tktDetails"));
+  tktDetailsContainer.innerHTML = "";
+  tktSeach.forEach((tktSeach) => {
+    tktDetailsContainer.innerHTML += `
+    <div class="flight-detail">
+    <div>From : ${tktSeach.from_}</div>
+    <div>To : ${tktSeach.to_}</div>
+    <div>Airline : ${tktSeach.airline}</div>
+    <div>Depature : ${tktSeach.departure}</div>
+    <div>arrival : ${tktSeach.arrival}</div>
+    <div>Class : ${tktSeach[5]}</div>
+    <div>Price : R${tktSeach.price}</div>
+    <button onclick="addToCart(${tktSeach.id})" class="ticketBuy">Buy</button>
+  </div>
+      `;
+  });
+}
+
+filterFlight(JSON.parse(localStorage.getItem("tktDetails")));
