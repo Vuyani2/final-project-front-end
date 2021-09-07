@@ -126,3 +126,13 @@ form div {
   border-bottom: 1px solid #33393d;
   border-right: 1px solid #33393d;
 }
+
+.btn {
+  padding: 10px;
+  background-color: #ffcd24;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #33393d;
+}

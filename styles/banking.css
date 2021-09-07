@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Gibson Regular", Tahoma, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #33393d;
+}
+
+.heard {
+  display: flex;
+  background-color: #2aabe4;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffcd24;
+}
+
+form {
+  margin: 50px;
+  background-color: #2aabe4;
+  padding: 50px;
+}
+
+#form {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contuct_heading {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.banking_info {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banking_info input {
+  margin-left: 20px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  color: #33393d;
+}
+
+.banking {
+  padding-bottom: 20px;
+}
+
+.butt_link {
+  border-radius: 74px;
+  background: linear-gradient(145deg, #ffcd24, #ffcd24);
+  width: 100%;
+  padding: 10px;
+}

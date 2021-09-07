@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/banking.css" />
+    <title>Banking details</title>
+  </head>
+  <body>
+    <section class="heard">
+      <img src="" alt="logo" />
+      <nav>
+        <a href="">Flight tickets</a>
+        <a href="">Rent a car</a>
+      </nav>
+    </section>
+    <section id="form">
+      <!--form-->
+      <form
+        action="https://formspree.io/f/xleaaabk"
+        method="POST"
+        id="banking-details"
+      >
+        <h1 class="contuct_heading">Fill in your banking details</h1>
+        <!--name-->
+        <div class="banking_info">
+          <label for="Acc-name" class="label_info">Account Name</label>
+          <input
+            type="text"
+            name="neme"
+            required
+            placeholder="Account name"
+            id="name"
+            class="input_info"
+          />
+        </div>
+        <!--email-->
+        <div class="banking_info">
+          <label for="email" class="label_info">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="name@domain.com"
+            id="email"
+            class="input_info"
+          />
+        </div>
+        <!--bank name-->
+        <div class="banking">
+          <input type="radio" id="absa" name="bank" value="ABSA" />
+          <label for="absa">ABSA</label><br />
+          <input type="radio" id="Capitec" name="bank" value="Capitec" />
+          <label for="css">Capitec</label><br />
+          <input type="radio" id="FNB" name="bank" value="FNB" />
+          <label for="javascript">FNB</label><br />
+          <input
+            type="radio"
+            id="Standard-Bank"
+            name="bank"
+            value="Standard-Bank"
+          />
+          <label for="Standard-Bank">Starndard Bank</label><br />
+          <input
+            type="radio"
+            id="African-bank"
+            name="bank"
+            value="African-bank"
+          />
+          <label for="African Bank">Afrivan Bank</label><br />
+          <input type="radio" id="Ned-bank" name="bank" value="Ned-bank" />
+          <label for="Ned-bank">Ned-bank</label>
+        </div>
+        <!--branch name-->
+        <div class="banking_info">
+          <label for="branch name" class="label_info">Branch name</label>
+          <input
+            type="text"
+            name="Branch_name"
+            placeholder="Type in your Branch name"
+            id="Branch-name"
+            class="input_info"
+          />
+        </div>
+        <!-- Branch number -->
+        <div class="banking_info">
+          <label for="branch Number" class="label_info">Branch Number</label>
+          <input
+            type="text"
+            name="Branch_number"
+            placeholder="Type in your Branch number"
+            id="Branch-number"
+            class="input_info"
+          />
+        </div>
+        <div class="banking_info">
+          <label for="Acc-holder-name" class="label_info"
+            >Account Holder Name</label
+          >
+          <input
+            type="text"
+            name="Acc-holder-name"
+            placeholder="Type in your Account holder name"
+            id="Acc-holder-name"
+            class="input_info"
+          />
+        </div>
+        <div class="banking_info">
+          <label for="Account_Number" class="label_info">Account Number</label>
+          <input
+            type="text"
+            name="Account_Number"
+            placeholder="Type in your Account_Number"
+            id="Account_Number"
+            class="input_info"
+          />
+        </div>
+        <div class="banking_info">
+          <label for="Account-type" class="label_info">Account Type</label>
+          <input
+            type="text"
+            name="Account-type"
+            placeholder="Type in your Account Type"
+            id="Account_Number"
+            class="input_info"
+          />
+        </div>
+        <!--send button-->
+        <div class="contuct_info">
+          <button class="butt_link">Send</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

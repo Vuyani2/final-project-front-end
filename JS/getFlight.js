@@ -97,6 +97,8 @@ function showFlightDetails(tktshows) {
     <div class="detail">Type : ${tktDetail.type}</div>
     <div class="detail">Price : R${tktDetail.price}</div>
   </div>
+  <div><button class="btn"><a href="./banking.html" target="_blank" rel="noopener noreferrer">BUY Ticket</a>
+  </button></div>
   `;
   });
 }
