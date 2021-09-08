@@ -66,15 +66,26 @@ function login(username, password) {
     .then((response) => response.json())
     .then((data) => {
       let users = data.data;
-      let user = users.find((person) => {
-        return person["username"] == username || person["password"] == password;
+      console.log(users);
+
+      users.forEach((user) => {
+        if (user.username == username && user.password == password) {
+          localStorage.setItem("user", JSON.stringify(user));
+          window.location.href = "/flights.html";
+        }
       });
-      console.log(user);
-      if (user.length < 1) {
-        alert("User not found");
-      } else {
-        window.location.href = "/flights.html";
-      }
+
+      alert("User not found");
+
+      // let user = users.find((person) => {
+      //   return person["username"] == username || person["password"] == password;
+      // });
+      // console.log(user);
+      // if (user.length < 1) {
+      //   alert("User not found");
+      // } else {
+      //   window.location.href = "/flights.html";
+      // }
     });
 }
 
