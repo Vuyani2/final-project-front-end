@@ -106,21 +106,21 @@ showFlightDetails(JSON.parse(localStorage.getItem("tktDetails")));
 console.log(JSON.parse(localStorage.getItem("tktshows")));
 JSON.parse(localStorage.getItem("tktshows"));
 
-fetch(
-  "https://obscure-retreat-25084.herokuapp.com/get-tkt/" +
-    from_ +
-    "/" +
-    to_ +
-    "/",
-  { method: "GET" }
-)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data.data);
-    let tickets = data.data;
+// fetch(
+//   "https://obscure-retreat-25084.herokuapp.com/get-tkt/" +
+//     from_ +
+//     "/" +
+//     to_ +
+//     "/",
+//   { method: "GET" }
+// )
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data.data);
+//     let tickets = data.data;
 
-    localStorage.tktSeach = JSON.stringify(data.data);
-  });
+//     localStorage.tktSeach = JSON.stringify(data.data);
+//   });
 
 function filterFlight(tktSeach) {
   let tktDetailsContainer = document.querySelector(".flight-details");
@@ -144,3 +144,39 @@ function filterFlight(tktSeach) {
 }
 
 filterFlight(JSON.parse(localStorage.getItem("tktDetails")));
+
+function search(from_, to) {
+  fetch(`https://obscure-retreat-25084.herokuapp.com/get-tkt/${from_}/${to}`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      let ticket = data.data;
+      console.log(ticket);
+      createtkt(ticket);
+    });
+}
+
+function createtkt(ticket) {
+  let tktsearchContainer = document.querySelector(".filter");
+  // console.log(tktDetailsContainer);
+  // let tktDetails = JSON.parse(localStorage.getItem("tktDetails"));
+  tktsearchContainer.innerHTML = "";
+  ticket.forEach((ticket) => {
+    tktsearchContainer.innerHTML += `
+    <div class="flight-detail">
+    <div>From : ${ticket[1]}</div>
+    <div>To : ${ticket[2]}</div>
+    <div>Airline : ${ticket[3]}</div>
+    <div>Depature : ${ticket[4]}</div>
+    <div>arrival : ${ticket[5]}</div>
+    <div>Class : ${ticket[6]}</div>
+    <div>Price : R${ticket[7]}</div>
+    <button onclick="addToCart(${ticket[0]})" class="ticketBuy">Buy</button>
+  </div>
+      `;
+  });
+}
+search(window.localStorage.getItem("from_"), window.localStorage.getItem("to"));

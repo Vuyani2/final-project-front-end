@@ -12,37 +12,41 @@ sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
 
-// let regForm = document.querySelector(".form");
+let regForm = document.querySelector(".sign-up-form");
 
-// //SUBMIT FOR REG
+//SUBMIT FOR REG
 
-// regForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
+regForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-//   let firstName = document.querySelector(".first-name").value;
-//   let lastName = document.querySelector(".last-name").value;
-//   let username = document.querySelector(".username").value;
-//   let password = document.querySelector(".password").value;
+  let firstName = document.querySelector(".first-name").value;
+  let lastName = document.querySelector(".last-name").value;
+  let username = document.querySelector("#username").value;
+  let password = document.querySelector("#password").value;
+  let email = document.querySelector(".email").value;
+  let phone = document.querySelector(".phone-no").value;
 
-//   let details = {
-//     firstName: firstName,
-//     lastName: lastName,
-//     username: username,
-//     password: password,
-//   };
+  let details = {
+    first_name: firstName,
+    last_name: lastName,
+    username: username,
+    password: password,
+    email: email,
+    mobile_number: phone,
+  };
 
-//   console.log(details);
+  console.log(details);
 
-//   fetch("https://obscure-retreat-25084.herokuapp.com/user-registration/", {
-//     headers: { "content-type": "application/json" },
-//     method: "POST",
-//     body: JSON.stringify(details),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//     });
-// });
+  fetch("https://obscure-retreat-25084.herokuapp.com/user-registration/", {
+    headers: { "content-type": "application/json" },
+    method: "POST",
+    body: JSON.stringify(details),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+});
 
 let loginForm = document.querySelector(".sign-in-form");
 
@@ -66,26 +70,22 @@ function login(username, password) {
     .then((response) => response.json())
     .then((data) => {
       let users = data.data;
-      console.log(users);
+      let user_found = false;
 
       users.forEach((user) => {
         if (user.username == username && user.password == password) {
+          user_found = true;
           localStorage.setItem("user", JSON.stringify(user));
           window.location.href = "/flights.html";
+          console.log(user_found);
+          // return;
         }
       });
 
-      alert("User not found");
-
-      // let user = users.find((person) => {
-      //   return person["username"] == username || person["password"] == password;
-      // });
-      // console.log(user);
-      // if (user.length < 1) {
-      //   alert("User not found");
-      // } else {
-      //   window.location.href = "/flights.html";
-      // }
+      console.log(user_found);
+      if (!user_found) {
+        alert("User not found");
+      }
     });
 }
 

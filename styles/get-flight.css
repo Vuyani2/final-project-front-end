@@ -136,3 +136,24 @@ form div {
   text-decoration: none;
   color: #33393d;
 }
+
+.filter {
+  display: flex;
+  margin: 20px;
+  margin-top: 50px;
+  flex-direction: column;
+}
+
+.filter div {
+  margin: 10px;
+  border-bottom: 1px solid #1bb3f5;
+  border-right: 1px solid #1bb3f5;
+  padding: 30px;
+  padding-right: 50px;
+}
+
+.filter button {
+  background-color: #1bb3f5;
+  border: none;
+  padding: 20px;
+}
