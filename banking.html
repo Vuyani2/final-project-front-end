@@ -45,7 +45,7 @@
         </div>
         <!--bank name-->
         <div class="banking">
-          <input type="radio" id="absa" name="bank" value="ABSA" />
+          <input type="radio" id="absa" name="bank" value="ABSA" required />
           <label for="absa">ABSA</label><br />
           <input type="radio" id="Capitec" name="bank" value="Capitec" />
           <label for="css">Capitec</label><br />
@@ -59,19 +59,27 @@
           />
           <label for="Standard-Bank">Starndard Bank</label><br />
           <input
+            required
             type="radio"
             id="African-bank"
             name="bank"
             value="African-bank"
           />
           <label for="African Bank">Afrivan Bank</label><br />
-          <input type="radio" id="Ned-bank" name="bank" value="Ned-bank" />
+          <input
+            required
+            type="radio"
+            id="Ned-bank"
+            name="bank"
+            value="Ned-bank"
+          />
           <label for="Ned-bank">Ned-bank</label>
         </div>
         <!--branch name-->
         <div class="banking_info">
           <label for="branch name" class="label_info">Branch name</label>
           <input
+            required
             type="text"
             name="Branch_name"
             placeholder="Type in your Branch name"
@@ -83,6 +91,7 @@
         <div class="banking_info">
           <label for="branch Number" class="label_info">Branch Number</label>
           <input
+            required
             type="text"
             name="Branch_number"
             placeholder="Type in your Branch number"
@@ -95,6 +104,7 @@
             >Account Holder Name</label
           >
           <input
+            required
             type="text"
             name="Acc-holder-name"
             placeholder="Type in your Account holder name"
@@ -105,6 +115,7 @@
         <div class="banking_info">
           <label for="Account_Number" class="label_info">Account Number</label>
           <input
+            required
             type="text"
             name="Account_Number"
             placeholder="Type in your Account_Number"
@@ -115,6 +126,7 @@
         <div class="banking_info">
           <label for="Account-type" class="label_info">Account Type</label>
           <input
+            required
             type="text"
             name="Account-type"
             placeholder="Type in your Account Type"

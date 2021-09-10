@@ -84,7 +84,7 @@ function showFlightDetails(tktshows) {
     <div>
     <img src="./img/Air-New-Zealand-Boeing-747-400.jpg" alt="" />
   </div>
-  <div>
+  <div class="self">
     <div class="flex">
     <div class="detail">From : ${tktDetail.from_}</div>
     <div class="detail">To : ${tktDetail.to_}</div>

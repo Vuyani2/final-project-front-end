@@ -66,3 +66,14 @@ form {
   width: 100%;
   padding: 10px;
 }
+
+@media (max-width: 578px) {
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .banking_info {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -157,3 +157,17 @@ form div {
   border: none;
   padding: 20px;
 }
+
+@media (max-width: 870px) {
+  .flight-detail {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1277px) {
+  .flight-detail {
+    display: flex;
+    flex-direction: column;
+  }
+}
