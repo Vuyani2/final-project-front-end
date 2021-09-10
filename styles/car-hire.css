@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Gibson Regular", Tahoma, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #33393d;
+}
+
+.heard {
+  display: flex;
+  background-color: #2aabe4;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffcd24;
+}
+
+.product-item {
+  width: 48%;
+  margin: 1%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1%;
+}
+
+.product-item img {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.product-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btns-container {
+  width: 150px;
+  background-color: #2aabe4;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 15px 10px 15px 10px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+.btns-container:hover {
+  font-size: 1.1em;
+  /* background: rgba(255, 255, 255, 0.8); */
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.cars h1 {
+  color: #ffcd24;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cars h2 {
+  color: #ffcd24;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}

@@ -10,6 +10,7 @@ form.addEventListener("submit", (e) => {
 function sendEmail(user_id) {
   let tktshows = JSON.parse(localStorage.getItem("flightToBuy")) || [];
 
+  console.log(user_id);
   console.log(tktshows[0]);
 
   fetch(`https://obscure-retreat-25084.herokuapp.com/send-email/${user_id}/`, {

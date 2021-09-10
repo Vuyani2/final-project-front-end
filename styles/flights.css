@@ -134,3 +134,20 @@ section {
 .contuct_info {
   border-bottom: 1px solid #1bb3f5;
 }
+
+@media (max-width: 580px) {
+  .form-map {
+    display: flex;
+    flex-direction: column;
+  }
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+  }
+  .last-para {
+    margin: 20px;
+  }
+  h3 {
+    margin: 20px;
+  }
+}
